@@ -1,9 +1,17 @@
-import React from 'react';
-import tw from 'twin.macro';
+/** @jsx jsx **/
+import { jsx } from '@emotion/core';
+import 'twin.macro';
+
+// Components
+import Heading from './components/Heading';
 
 function App() {
   return (
-    <h1>Hello World</h1>   
+    <div tw="bg-gray-800 min-h-screen">
+      <main tw="container mx-auto py-16">
+        <Heading/>
+      </main>
+    </div>
   );
 }
 

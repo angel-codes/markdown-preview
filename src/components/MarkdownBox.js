@@ -8,11 +8,20 @@ const MarkdownInput = styled.textarea(() => [
     `height: 55vh`
 ]);
 
-const MarkdownBox = () => {
+const MarkdownBox = ({ markdown, setMarkdown }) => {
+    
+    // Get the Markdown
+    const handleChange = e => {
+        setMarkdown(e.target.value);
+    }
+
     return (
         <Fragment>
             <SubHeading>Input</SubHeading>
-            <MarkdownInput/>
+            <MarkdownInput
+                onChange={handleChange}
+                value={markdown}
+            />
         </Fragment>
     );
 }

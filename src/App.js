@@ -24,7 +24,9 @@ function App() {
             />
           </div>
           <div tw="col-span-2 md:col-span-1">
-            <MarkdownPreview/>
+            <MarkdownPreview
+              markdown={markdown}
+            />
           </div>
         </div>
       </main>
